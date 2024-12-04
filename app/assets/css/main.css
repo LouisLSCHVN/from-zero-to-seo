@@ -1,0 +1,10 @@
+/* assets/css/main.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Bowlby One', sans-serif;
+    scroll-behavior: smooth;
+    text-transform: uppercase;
+}
