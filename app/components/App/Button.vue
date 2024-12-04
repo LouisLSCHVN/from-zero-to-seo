@@ -66,7 +66,7 @@
 
       <!-- Texte -->
       <div class="absolute inset-0 flex items-center justify-center z-10">
-        <div :class="dark ? 'text-primary' : 'text-secondary'" class="font-bold text-[28px] tracking-widest flex gap-2 items-center translate-y-[2px]">
+        <div :class="dark ? 'text-primary' : 'text-secondary'" class="font-bold text-[28px] tracking-widest flex gap-3 items-center translate-y-[2px]">
           <svg v-if="arrow" width="16" height="33" viewBox="0 0 26 33" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.69531 1.84741L24.3164 16.3896L1.69531 30.9317V1.84741Z" :fill="dark ? '#5D4F9C' : '#CCCAE6'" :stroke="dark ? '#5D4F9C' : '#CCCAE6'" stroke-width="3.23159" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>

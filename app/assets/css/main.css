@@ -5,6 +5,5 @@
 
 body {
     font-family: 'Bowlby One', sans-serif;
-    scroll-behavior: smooth;
-    text-transform: uppercase;
+    @apply bg-secondary uppercase scroll-smooth
 }
