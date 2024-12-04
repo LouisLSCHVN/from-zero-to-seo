@@ -3,6 +3,7 @@
       <!-- SVG supérieur avec texte -->
       <div class="relative z-10 -translate-y-[2px]">
       <svg
+          v-if="title"
           class="absolute top-0 left-1/2 -translate-x-1/2"
           width="75"
           height="21"
@@ -85,7 +86,6 @@
     },
     title: {
       type: String,
-      default: 'Ready',
     },
     arrow: {
       type: Boolean,

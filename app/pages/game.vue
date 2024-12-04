@@ -1,6 +1,6 @@
 <template>
-    <div class="min-h-screen flex flex-col items-center space-y-14 pt-8">
-        <AppBackButton />
+    <div class="min-h-screen flex flex-col items-center justify-center space-y-14">
+        <AppBackButton class="absolute top-8 left-8" />
         <Logo />
         <template v-if="gameState === 'lobby'">
             <div class="px-6 py-2 bg-primary text-secondary font-bold rounded-md tracking-widest">
@@ -23,14 +23,45 @@
             <AppButton title="Ready" arrow @click="gameState = 'playing'">Start</AppButton>
         </template>
         <template v-if="gameState === 'playing'">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-x-24">
+                <div class="flex flex-col items-center w-32">
+                    <div class="font-bold mb-4 text-primary">Remove</div>
+                    <div class="space-y-2 flex flex-col items-center w-full scale-75">
+                        <AppButton
+                            v-for="amount in [-50, -100, -150, -200]"
+                            :key="amount"
+                            @click="updateBudget(userSelected, amount)"
+                        >
+                            {{ amount }}€
+                        </AppButton>
+                    </div>
+                </div>
 
-            <AppSelector
-                v-model="userSelected"
-                :users="users"
-                title="Your Turn"
-                :dark="false"
-            />
+                <div class="flex flex-col items-center gap-4">
+                    <AppSelector
+                    v-model="userSelected"
+                    :users="users"
+                    title="Your Turn"
+                    :dark="false"
+                />
+                    <AppUserBoard :users="users" v-model:userSelected="userSelected" />
+                </div>
 
+                <div class="flex flex-col items-center w-32">
+                    <div class="font-bold mb-4 text-primary">Add</div>
+                    <div class="space-y-2 flex flex-col items-center w-full scale-75">
+                        <AppButton
+                            v-for="amount in [50, 100, 150, 200]"
+                            :key="amount"
+                            @click="updateBudget(userSelected, amount)"
+                        >
+                            +{{ amount }}€
+                        </AppButton>
+                    </div>
+                </div>
+            </div>
+
+            <AppButton title="Finish ?" @click="gameState = 'over'">End</AppButton>
         </template>
 
         <template v-if="gameState === 'over'">
@@ -40,6 +71,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+
 const users = ref([
     { name: 'Paul', budget: 500 }
 ])
@@ -57,8 +90,16 @@ const updateUserName = (index: number, newName: string) => {
     users.value[index]!.name = newName
 }
 
-const userSelected = ref(users.value[0]!.name);
+const userSelected = ref(users.value[0]?.name || '');
 
 type GameState = 'lobby' | 'playing' | 'over'
 const gameState: Ref<GameState> = ref('lobby')
+
+const updateBudget = (userName: string, amount: number) => {
+    const user = users.value.find((u) => u.name === userName);
+    if (user) {
+        user.budget += amount;
+        if (user.budget < 0) user.budget = 0; // Empêche les budgets négatifs
+    }
+};
 </script>
