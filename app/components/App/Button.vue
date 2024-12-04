@@ -3,7 +3,7 @@
       <!-- SVG supérieur avec texte -->
       <div class="relative">
         <svg
-          class="absolute top-1 left-1/2 -translate-x-1/2"
+          class="absolute top-0 left-1/2 -translate-x-1/2"
           width="75"
           height="21"
           viewBox="0 0 120 35"
@@ -19,7 +19,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="absolute top-1 left-1/2 -translate-x-1/2 -translate-y-[-2px] text-primary text-xs">{{ title }}</span>
+        <span class="absolute top-1 left-1/2 -translate-x-1/2 -translate-y-[2px] text-primary text-xs">{{ title }}</span>
       </div>
 
       <!-- Conteneur principal -->
@@ -43,7 +43,7 @@
 
       <!-- Texte -->
       <div class="absolute inset-0 flex items-center justify-center z-10">
-        <p class="font-bold text-secondary text-lg tracking-widest">
+        <p class="font-bold text-secondary text-[28px] tracking-widest flex gap-2 items-center translate-y-[2px]">
           <slot />
         </p>
       </div>
@@ -57,6 +57,7 @@
     },
     title: {
       type: String,
+      default: 'Ready',
     },
   });
   </script>
