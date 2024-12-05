@@ -29,7 +29,6 @@
 
     <!-- SVG background -->
     <div class="relative">
-        <svg
       <svg
         v-if="!dark"
         class="block mx-auto scale-y-110 -z-10"

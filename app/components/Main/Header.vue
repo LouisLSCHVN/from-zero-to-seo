@@ -1,9 +1,0 @@
-<template>
-    <header>
-        <NuxtLink>
-            <p>
-                Play
-            </p>
-        </NuxtLink>
-    </header>
-</template>
