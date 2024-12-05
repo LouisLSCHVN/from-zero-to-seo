@@ -6,6 +6,10 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
 
+  routeRules: {
+    '/rules': { static: true, }
+  },
+
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
