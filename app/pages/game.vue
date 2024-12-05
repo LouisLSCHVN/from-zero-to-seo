@@ -65,16 +65,21 @@
         </template>
 
         <template v-if="gameState === 'over'">
-
+            <h1 class="text-center text-primary text-5xl">
+                THANKS FOR PLAYING !
+            </h1>
+            <div class="flex items-center flex-wrap gap-6 justify-center">
+                <AppUserOver v-for="(user, i) in users" :key="i" :name="user.name" />
+            </div>
+            <AppButton title="Enjoy ?" to="/play">Play Again</AppButton>
         </template>
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-
 const users = ref([
-    { name: 'Paul', budget: 500 }
+    { name: 'Paul', budget: 500 },
+    { name: 'Louis', budget: 500 },
 ])
 
 const addUser = () => {
@@ -99,7 +104,7 @@ const updateBudget = (userName: string, amount: number) => {
     const user = users.value.find((u) => u.name === userName);
     if (user) {
         user.budget += amount;
-        if (user.budget < 0) user.budget = 0; // Empêche les budgets négatifs
+        if (user.budget < 0) user.budget = 0;
     }
 };
 </script>

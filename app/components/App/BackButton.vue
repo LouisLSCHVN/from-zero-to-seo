@@ -1,7 +1,7 @@
 <template>
     <NuxtLink
     to="/"
-    class="absolute top-8 left-8 flex items-center gap-2 px-4 py-2 bg-primary text-secondary rounded-md shadow-lg hover:translate-y-[-2px] transition-all duration-300"
+    class="absolute top-8 left-8 flex items-center gap-2 px-4 py-2 bg-primary text-secondary rounded-md hover:translate-y-[-2px] transition-all duration-300"
   >
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M9 14L4 9L9 4" stroke="#CCCAE6" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>

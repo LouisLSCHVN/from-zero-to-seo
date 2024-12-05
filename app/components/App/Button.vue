@@ -1,6 +1,6 @@
 <template>
-    <NuxtLink :to="to" class="relative inline-block text-center">
-      <!-- SVG supérieur avec texte -->
+  <NuxtLink :to="to" class="relative inline-block text-center cursor-pointer transition-transform hover:scale-105">
+    <!-- SVG supérieur avec texte -->
       <div class="relative z-10 -translate-y-[2px]">
       <svg
           v-if="title"
