@@ -19,27 +19,25 @@
         <input
             class="text-primary text-center text-sm bg-transparent border-none outline-none w-20 focus:ring-0 focus:outline-none placeholder:uppercase"
             :value="name"
-            @input="e => emit('update:name', e.target.value)"
+            @input="handleInput"
             placeholder="Name"
         />
     </div>
 </template>
 
-<script setup lang="ts">
-defineProps({
+<script setup>
+const props = defineProps({
     name: {
         type: String,
-        required: true
     },
     king: {
         type: Boolean,
-        default: false
+        default: false,
     }
 })
 
-const emit = defineEmits<{
-    'update:name': [value: string]
-}>()
+const emit = defineEmits(['update:name'])
+
 </script>
 
 <style scoped>
