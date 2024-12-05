@@ -6,17 +6,23 @@
       <p class="page-description"></p>
     </header>
     <div class="page-body space-y-6">
-      <h2 id="b2960058-2c5d-4006-b4e7-836e4de10b17" class="text-2xl font-bold text-primary mb-4"><strong>Game Objective</strong></h2>
+      <h2 id="b2960058-2c5d-4006-b4e7-836e4de10b17" class="text-2xl font-bold text-primary mb-4"><strong>
+        <AppRulesTitle name="Game Overview" />
+      </strong></h2>
       <p id="5c3015a6-40de-406e-9da1-36510342f66b" class="text-primary">
         Be the first player to reach exactly <strong>1,000 monthly users</strong> by strategically using your budget to play various cards that increase your traffic, hinder your opponents, and protect your site.
       </p>
-      <h2 id="a346d70b-255d-4744-8cf3-6095b9ef04b1" class="text-2xl font-bold mb-4"><strong>Game Components</strong></h2>
+      <h2 id="a346d70b-255d-4744-8cf3-6095b9ef04b1" class="text-2xl font-bold mb-4"><strong>
+        <AppRulesTitle name="Components" />
+      </strong></h2>
       <ul id="93f05ca3-60ce-43e8-8048-fbc633c505cf" class="bulleted-list list-disc pl-5 space-y-2">
         <li><strong>Players:</strong> 2 to 4</li>
         <li><strong>Starting Budget:</strong> €500 per player</li>
         <li><strong>Total Cards:</strong> 83</li>
       </ul>
-      <h2 id="bc9cee00-009e-4799-a837-228d2ece7d44" class="text-2xl font-bold mb-4"><strong>Types of Cards</strong></h2>
+      <h2 id="bc9cee00-009e-4799-a837-228d2ece7d44" class="text-2xl font-bold mb-4"><strong>
+        <AppRulesTitle name="Card Types" />
+      </strong></h2>
       <h3 id="9db294a1-2237-4e63-8174-9c967b2fd6af" class="text-xl font-bold mb-2"><strong>1. Traffic Cards</strong></h3>
       <p id="a1a87f9a-6dd7-4a37-8a0c-c95f7053a7f7" class="text-primary mb-4">These cards increase your website traffic (users). They cost budget to play.</p>
       <table id="5265b761-1321-4b0e-9ce6-f2864277afa2" class="simple-table w-full border-collapse mb-4">
@@ -188,14 +194,18 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="f7d739a7-1e38-48e6-aeae-dfb1b9b28ccf" class="text-2xl font-bold mb-4"><strong>Game Setup</strong></h2>
+      <h2 id="f7d739a7-1e38-48e6-aeae-dfb1b9b28ccf" class="text-2xl font-bold mb-4"><strong>
+        <AppRulesTitle name="Setup" />
+      </strong></h2>
       <ol type="1" id="9981875b-fbfd-4cf2-9686-21e967a5fd51" class="numbered-list list-decimal pl-5 space-y-2">
         <li><strong>Shuffle</strong> all cards thoroughly.</li>
         <li><strong>Deal</strong> 6 cards to each player.</li>
         <li><strong>Place</strong> the remaining cards face down to form the draw pile.</li>
         <li><strong>Decide</strong> the first player (e.g., the youngest goes first).</li>
       </ol>
-      <h2 id="0185d70e-eab5-4e9f-8660-0e061e0f46f7" class="text-2xl font-bold mb-4"><strong>Gameplay</strong></h2>
+      <h2 id="0185d70e-eab5-4e9f-8660-0e061e0f46f7" class="text-2xl font-bold mb-4"><strong>
+        <AppRulesTitle name="Gameplay" />
+      </strong></h2>
       <ul id="931bd067-aee5-4600-994d-424c88fdf32a" class="bulleted-list list-disc pl-5 space-y-2">
         <li>Players take turns in a clockwise direction.</li>
         <li>On your turn, you must choose one of the following actions:
@@ -251,20 +261,26 @@
       </tbody>
     </table>
     <p class="text-primary mb-4"><strong>Example:</strong> If you have 350 users at the end of your turn, you earn €100 to add to your budget.</p>
-    <h2 class="text-2xl font-bold mb-4"><strong>Special Rules</strong></h2>
+    <h2 class="text-2xl font-bold mb-4"><strong>
+        <AppRulesTitle name="Special Rules" />
+    </strong></h2>
     <ul class="bulleted-list list-disc pl-5 space-y-2">
       <li><strong>Exact Goal:</strong> You must reach exactly 1,000 users to win. Exceeding 1,000 means you must adjust your points (e.g., by discarding traffic cards or playing penalties on yourself).</li>
       <li><strong>Stacking Penalties:</strong> You can stack penalties on opponents, but they can only play one repair card per turn.</li>
       <li><strong>Out of Budget:</strong> If you run out of budget, you can only draw and discard cards until you earn more budget at the end of your turn.</li>
       <li><strong>Starting the Game:</strong> To start earning points, you must play the <strong>Freelancer (Agency)</strong> card. Without it, you cannot play traffic cards.</li>
     </ul>
-    <h2 class="text-2xl font-bold mb-4"><strong>End of the Game</strong></h2>
+    <h2 class="text-2xl font-bold mb-4"><strong>
+        <AppRulesTitle name="Ending the Game" />
+    </strong></h2>
     <ul class="bulleted-list list-disc pl-5 space-y-2">
       <li>The game ends immediately when a player reaches exactly 1,000 users.</li>
       <li>If the draw pile is empty, shuffle the discard pile to create a new draw pile.</li>
       <li>If all players agree to end the game early, the player closest to 1,000 users wins.</li>
     </ul>
-    <h2 class="text-2xl font-bold mb-4"><strong>Strategic Tips</strong></h2>
+    <h2 class="text-2xl font-bold mb-4"><strong>
+        <AppRulesTitle name="Strategy Tips" />
+    </strong></h2>
     <ul class="bulleted-list list-disc pl-5 space-y-2">
       <li><strong>Balance Attack and Defense:</strong> While increasing your own traffic, don't forget to hinder your opponents.</li>
       <li><strong>Manage Your Budget:</strong> Spend wisely; running out of budget can leave you vulnerable.</li>
