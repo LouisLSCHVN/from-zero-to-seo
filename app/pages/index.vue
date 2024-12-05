@@ -40,7 +40,7 @@
               </AppButton>
             </div>
 
-            <div class="relative flex h-fit w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background p-px md:shadow-xl">
+            <div class="relative flex h-fit mx-4 flex-col items-center justify-center overflow-hidden rounded-lg border bg-background p-px md:shadow-xl">
               <img
                 src="/img/landing.png"
                 class="w-full rounded-md mx-5"
@@ -68,7 +68,7 @@
           </p>
         </section>
 
-        <section class="relative w-full py-40 h-[140vh]">
+        <section class="relative w-full py-40 h-[120vh] md:h-[140vh]">
           <h2 class="text-4xl font-bold text-center mb-12">
             Discover The Cards
           </h2>
@@ -85,7 +85,7 @@
               </div>
 
               <!-- Carte centrale - plus grande -->
-              <div class="transform scale-125 transition-all duration-300 z-10">
+              <div class="transform scale-100 md:scale-125 transition-all duration-300 z-10">
                 <CardContainer class="shadow-2xl">
                   <CardBody>
                     <Card2 />

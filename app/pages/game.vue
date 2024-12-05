@@ -20,7 +20,7 @@
                     @click="addUser"
                 />
             </div>
-            <AppButton title="Ready" arrow @click="gameState = 'playing'">Start</AppButton>
+            <AppButton title="Ready" arrow @click="startGame()">Start</AppButton>
         </template>
         <template v-if="gameState === 'playing'">
             <div class="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-x-24">
@@ -79,6 +79,7 @@
 <script setup lang="ts">
 import confetti from 'canvas-confetti';
 
+
 const users = ref([
     { name: 'Paul', budget: 500 },
     { name: 'Louis', budget: 500 },
@@ -111,9 +112,16 @@ const updateBudget = (userName: string, amount: number) => {
 };
 
 const endGame = () => {
+  if (typeof window !== 'undefined') {
     handleClick();
-    gameState.value = 'over';
+  }
+  gameState.value = 'over';
 };
+
+const startGame = async () => {
+  await nextTick()
+  gameState.value = 'playing'
+}
 
 // Function to trigger the confetti fireworks
 function handleClick() {
