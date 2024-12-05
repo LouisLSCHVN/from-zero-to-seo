@@ -68,6 +68,43 @@
           </p>
         </section>
 
+        <section class="relative w-full py-40 h-[140vh]">
+          <h2 class="text-4xl font-bold text-center mb-12">
+            Discover The Cards
+          </h2>
+
+          <div class="flex items-center justify-center gap-12 py-12 px-4 max-w-7xl mx-auto scale-90">
+            <ClientOnly>
+              <!-- Première carte - inclinée vers la gauche -->
+              <div class="hidden lg:block transform -rotate-6 transition-all duration-300">
+                <CardContainer class="shadow-xl">
+                  <CardBody>
+                    <Card1 />
+                  </CardBody>
+                </CardContainer>
+              </div>
+
+              <!-- Carte centrale - plus grande -->
+              <div class="transform scale-125 transition-all duration-300 z-10">
+                <CardContainer class="shadow-2xl">
+                  <CardBody>
+                    <Card2 />
+                  </CardBody>
+                </CardContainer>
+              </div>
+
+              <!-- Dernière carte - inclinée vers la droite -->
+              <div class="hidden lg:block transform rotate-6 transition-all duration-300">
+                <CardContainer class="shadow-xl">
+                  <CardBody>
+                    <Card3 />
+                  </CardBody>
+                </CardContainer>
+              </div>
+            </ClientOnly>
+          </div>
+        </section>
+
         <section id="features" class="mb-16 p-6">
           <h2 class="text-3xl font-bold mb-4">Game Features</h2>
           <div class="grid md:grid-cols-2 gap-8">
@@ -122,15 +159,6 @@
           </div>
         </section>
       </div>
-
-      <ClientOnly>
-        <CardContainer>
-          <CardBody>
-            <Card1 />
-          </CardBody>
-        </CardContainer>
-      </ClientOnly>
-
     </main>
 
     <footer class="bg-secondary py-6 mt-12">
@@ -152,3 +180,13 @@ const howToPlaySteps = [
   "Be the first to reach exactly 1000 users to win!"
 ]
 </script>
+
+<style scoped>
+.card-container {
+  perspective: 1000px;
+}
+
+.card-container:hover {
+  z-index: 20;
+}
+</style>
